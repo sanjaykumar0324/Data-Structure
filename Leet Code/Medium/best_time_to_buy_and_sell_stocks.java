@@ -22,19 +22,19 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 */
 class Solution {
     public int maxProfit(int[] prices) {
-          int lsf = Integer.MAX_VALUE;
-        int op = 0;
+          int low = Integer.MAX_VALUE;
+        int output = 0;
         int pist = 0;
         
         for(int i = 0; i < prices.length; i++){
-            if(prices[i] < lsf){
-                lsf = prices[i];
+            if(prices[i] < low){
+                low = prices[i];
             }
-            pist = prices[i] - lsf;
-            if(op < pist){
-                op = pist;
+            pist = prices[i] - low;
+            if(output < pist){
+                output = pist;
             }
         }
-        return op;
+        return output;
     }
 }
