@@ -106,15 +106,21 @@ public class ArrayPractice {
 
    
     public static void main(String[] args)  {
-       Scanner sc= new Scanner (System.in);
-       int n=sc.nextInt();
-   
-    ArrayPractice z= new ArrayPractice(3*n/2);
-        z.store2(z,n);
-        System.out.println("Content of Array ");
-       z.display();
-  
-        z.delDuplicateMaxMovement(z, n);
+       Scanner s= new Scanner(System.in);
+        int n=s.nextInt();
+        Ads2 a= new Ads2(3*n/2);
+        a.store2(a,n);
+        a.display();
+         System.out.println("\n\n\n min movement");
+        a.delDuplicateMinMovement(a,n);
+        a.display();
+         Ads2 b= new Ads2(3*n/2);
+        System.out.println("\n\n\n max movement");
+        b.store2(b,n);
+         b.display();
+        b.delDuplicateMaxMovement(b, n);
+        b.display();
+        
        
         
     }
